@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Taxi Driver Billing System</title>
+    </head>
+    <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        .backgroundImage {
+          background-image: url("taxi.jpeg");
+          filter: blur(8px);
+          -webkit-filter: blur(8px);
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .heading {
+          background-color: white;
+          text-align: center;
+          filter: none;
+            float: none;
+        }
+
+        @font-face {
+          font-family: customFont;
+          src: url("LilitaOne-Regular.ttf");
+        }
+
+        .head_text {
+            font-family: customFont;
+            font-size: 35px;
+            color: black;
+            margin-bottom: 50px;
+        }
+
+        .info_input {
+         float: left;
+          position:absolute;
+          top: 10%;
+          left: 35%;
+          transform: translateX(-50%); 
+          background-color: white; 
+          padding: 50px;
+            margin-right: 20px;
+        }
+        .bill_output {
+            float: right;
+            position:absolute;
+          top: 10%;
+          right: 15%; 
+          background-color: white; 
+            padding: 50px;
+            
+        }
+        .left_forms {
+            float: left;
+        }
+        .right_forms {
+            float: right;
+            margin-left: 100px;
+        }
+        input {
+            padding: 5px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .text_input {
+            width: 100%;
+            font-size: 15px;
+        }
+        label {
+            font-size: 20px;
+            font-weight: 400;
+            font-family: sans-serif;
+        }
+        .submit_button {
+            padding: 10px;
+            font-size: 20px;
+            background-color: white;
+            transition-duration: 0.35s;
+        }
+        .submit_button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <body>
+        
+        <div class="backgroundImage"></div>
+        
+        <div class="parent">
+        <div class="info_input">
+        <form onsubmit="return false" class="input_form">
+            <div class="heading">
+                <h1 class="head_text">TAXI DRIVER BILLING SYSTEM</h1>
+            </div>
+            <div class="left_forms">
+                <label>Enter the Customer's Name:</label><br>
+                <input class="text_input" type="text" id="custName"><br>
+                <label>Enter the date of travel:</label><br>
+                <input type="date" class="text_input" id="travelDate"><br>
+                <label>Enter the distance travelled:</label><br>
+                <input class="text_input" type="number" id="distTravelled"><br><br>
+
+                <input type="radio" id="microCar" name="flag1">
+                <label>Micro</label><br>
+                <input type="radio" id="miniCar" name="flag1">
+                <label>Mini</label><br>
+                <input type="radio" id="sedanCar" name="flag1">
+                <label>Sedan</label><br>
+                <input type="radio" id="xuvCar" name="flag1">
+                <label>XUV</label>
+            </div>
+            <div class="right_forms">
+                <input type="radio" id="acCar" name="flag2">
+                <label>AC</label><br>
+                <input type="radio" id="nonacCar" name="flag2">
+                <label>NON AC</label>
+                <br><br>
+                
+                <input type="radio" id="outJourney" name="flag3">
+                <label>Outstation</label><br>
+                <input type="radio" id="localJourney" name="flag3">
+                <label>Local</label>
+                
+                <br><br>
+                <input id = "submit"class="submit_button" type="submit" value="Generate Bill" onclick="doWork()">
+                
+            </div>
+            
+        </form> 
+            
+        </div>
+        <div class="bill_output">
+            <h1 class="head_text" align="center">TAXI BILL</h1>
+            <p id = "printResult"></p>
+        </div>
+        </div>
+        
+        
+    </body>
+    <script src="billing_system.js"></script>
+</html>

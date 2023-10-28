@@ -98,7 +98,6 @@ function doWork() {
             break;
     }
     if (flag == true) {
-        document.getElementById("printResult").innerHTML = "Customer Name: " + cName + "<br><br>Distance Travelled: " + dist + "km<br><br>Travel Date: " + travelDate + "<br><br>Car Type: " + carType + "<br><br>Total Amount: ₹" + total;
+        document.getElementById("printResult").innerHTML = "Customer Name: " + cName + "<br><br>Distance Travelled: " + dist + "km<br><br>Travel Date: " + travelDate + "<br><br>Car Type: " + carType + "<br><br>Total Amount: Rs. " + total;
     }
-    console.log(dist);
 }
